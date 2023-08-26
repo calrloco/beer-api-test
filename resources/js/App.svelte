@@ -35,6 +35,10 @@
                 }
             });
             beers = [...response.data.beers]
+            if (!beers.length) {
+                pageStore.set(1)
+                return
+            }
             window.scrollTo(0, 0)
         } catch (e) {
             //
@@ -50,7 +54,7 @@
 
 <main class="bg-gray-800 min-h-screen flex flex-col items-center py-10">
     {#if $tokenStore && beers?.length}
-        <div in:fade class="grid max-w-4xl md:grid-cols-3 md:px-0 px-5 grid-rows-3 w-full gap-4">
+        <div in:fade class="grid max-w-4xl md:grid-cols-3 md:px-0 px-5 w-full gap-4">
             {#each beers as beer, id}
                 <Card beer={beer}/>
             {/each}
