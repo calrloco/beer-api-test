@@ -44,7 +44,7 @@
             <span class="pl-1">Password</span>
             <input bind:value={values.password}
                    class:input-error={errors?.password}
-                   class={errors?.password === 'baz' ? 'selected' : '' + 'input px-2 py-1.5 outline-none'}
+                   class='input px-2 py-1.5 outline-none'
                    title="Email" type="password"
                    name="password"
                    placeholder="Password"/>

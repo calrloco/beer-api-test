@@ -17,6 +17,10 @@
     });
 
     async function getBeers(pagination = {page: null, per_page: null}) {
+        if (!$tokenStore) {
+            fetching = false
+            return
+        }
         const {page, per_page} = pagination
         fetching = true
         try {
