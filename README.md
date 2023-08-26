@@ -48,3 +48,10 @@ Andare a http://spin-up.test/  eseguire il login ora dovreste essere in grado di
 <img style="height: 50px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Svelte_Logo.svg/1200px-Svelte_Logo.svg.png">
 <img style="height: 50px" src="https://pbs.twimg.com/profile_images/1587479781544759297/TINbbJLC_400x400.png">
 </div>
+
+
+
+
+https://github.com/calrloco/beer-api-test/assets/60385209/7186247e-0fb6-488a-9016-19e35abc3f58
+
+
