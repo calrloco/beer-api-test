@@ -6,11 +6,11 @@
 </script>
 <div role="navigation" class="w-full lg:max-w-4xl px-5 lg:px-0 h-[50px] mt-3 flex justify-end">
     <div class="flex">
-        <select on:change={(e)=>perPageStore.set(e.target.value)}
+        <select value={$perPageStore} on:change={(e)=>perPageStore.set(e.target.value)}
                 class="select w-[70px] variant-filled mr-2">
             <option value="9">9</option>
             <option value="18">18</option>
-            <option value="24">27</option>
+            <option value="27">27</option>
         </select>
     </div>
     <button disabled={fetching || $pageStore === 1} on:click={()=>pageStore.set($pageStore - 1)} type="button"

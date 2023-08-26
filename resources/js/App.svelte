@@ -1,6 +1,5 @@
 <script lang="ts">
     import Login from "./Components/Login.svelte";
-    import {modalStore} from "@skeletonlabs/skeleton";
     import {tokenStore, pageStore, perPageStore} from './stores.js'
     import axios from "axios";
     import {onMount} from 'svelte';
@@ -17,7 +16,7 @@
         getBeers({per_page: value})
     });
 
-    async function getBeers(pagination = {page: $pageStore, per_page: $perPageStore}) {
+    async function getBeers(pagination = {page: null, per_page: null}) {
         const {page, per_page} = pagination
         fetching = true
         try {
@@ -27,8 +26,8 @@
                     Accept: 'application/json',
                 },
                 params: {
-                    page: page,
-                    per_page: per_page,
+                    page: page || $pageStore,
+                    per_page: per_page || $perPageStore,
                 }
             });
             beers = [...response.data.beers]
@@ -53,8 +52,8 @@
             {/each}
         </div>
         <Pagination fetching={fetching}/>
-    {:else }
-        <div in:scale class="absolute inset-0 grid place-items-center">
+    {:else if (!$tokenStore) && !fetching }
+        <div in:scale out:scale class="absolute inset-0 grid place-items-center">
             <Login onSuccess={()=>getBeers()}/>
         </div>
     {/if}

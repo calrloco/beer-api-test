@@ -2,14 +2,15 @@
 
 
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 it('can login', function () {
 
-    User::factory()->create();
+    $user = User::factory()->create();
 
     $response = $this->post('/login', [
-        'email' => 'root@root.it',
-        'password' => 'password',
+        'username' => 'root',
+        'password' => 'password'
     ]);
 
     $token = $response->json()['token'] ?? null;

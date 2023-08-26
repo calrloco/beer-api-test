@@ -5,12 +5,12 @@
     export let onSuccess;
 
     const values = {
-        email: 'root@root.it',
+        username: 'root',
         password: 'password',
     }
 
     let errors = {
-        email: '',
+        username: '',
         password: '',
     }
 
@@ -31,15 +31,14 @@
 <div class="card  py-10 px-5">
     <form on:submit|preventDefault={handleSubmit} class="lg:min-w-[500px] space-y-7">
         <div class="label">
-            <span class="pl-1">Email</span>
+            <span class="pl-1">Username</span>
             <input
-                class:input-error={errors?.email}
+                class:input-error={errors?.username}
                 class="input px-2 py-1.5 outline-none"
-                bind:value={values.email} title="Email" autocomplete="email"
-
+                bind:value={values.username} title="Username"
                 placeholder="Email" name="email"/>
-            {#if errors?.email}
-                <p class="ml-4 text-error-500">{errors.email}</p>
+            {#if errors?.username}
+                <p class="ml-4 text-error-500">{errors.username}</p>
             {/if}
         </div>
         <div class="label">

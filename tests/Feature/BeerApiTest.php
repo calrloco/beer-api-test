@@ -12,11 +12,11 @@ it("can't be fetch if not logged in", function () {
 
 it("can be fetched if logged in", function () {
 
-    User::factory()->create();
+    $user = User::factory()->create();
 
     $loginResponse = $this->post('/login', [
-        'email' => 'root@root.it',
-        'password' => 'password',
+        'username' => 'root',
+        'password' => 'password'
     ]);
     $token = $loginResponse->json()['token'] ?? null;
 
