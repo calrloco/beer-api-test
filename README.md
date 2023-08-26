@@ -33,6 +33,10 @@ Dopo aver installato le dependencies possiamo creare e avviare il container dock
 ```shell
 ./vendor/bin/sail up
 ```
+E fare il seeding del database con
+```shell
+./vendor/bin/sail artisan db:seed
+```
 Una volta avviato il container possiamo procedere a installare le dipendenze front end e builder gli asset
 ```shell
 npm i && npm run build
