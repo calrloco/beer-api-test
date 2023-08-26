@@ -50,8 +50,3 @@ Andare a http://spin-up.test/  eseguire il login ora dovreste essere in grado di
 </div>
 
 
-
-
-https://github.com/calrloco/beer-api-test/assets/60385209/7186247e-0fb6-488a-9016-19e35abc3f58
-
-
