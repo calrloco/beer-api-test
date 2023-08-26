@@ -13,7 +13,5 @@
         <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,300;0,400;0,500;0,700;0,900;1,200;1,300;1,400;1,700&family=VT323&display=swap" rel="stylesheet">
         @vite(['resources/js/app.js','resources/css/app.css'])
     </head>
-    <body class="antialiased">
-
-    </body>
+    <body class="antialiased"></body>
 </html>
