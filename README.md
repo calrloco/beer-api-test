@@ -10,8 +10,8 @@ Questo progetto consente agli utenti di autenticarsi e visualizzare un elenco di
 ## Implementazione
 
 - Il progetto utilizza il framework Laravel per il backend e Svelte per la parte frontend.
-- L'autenticazione viene gestita tramite il controller `app/Http/Controllers/Auth/AuthController.php`, che restituisce un token all'utente dopo l'accesso riuscito utilizzando Laravel sanctum.
-- L'elenco delle birre viene gestito dal controller `app/Http/Controllers/BeerController.php`, che fa da proxy alla Punk API usando le rotte api di sanctum.
+- L'autenticazione viene gestita nel controller `app/Http/Controllers/Auth/AuthController.php`, che restituisce un token all'utente dopo l'accesso riuscito da utilizzare nelle seguenti chiamate api.
+- L'elenco delle birre viene gestito dal controller `app/Http/Controllers/BeerController.php`, che fa da proxy alla Punk API usando le rotte api di Laravel Sanctum.
 - La visualizzazione delle birre e del login è gestita dai componenti Svelte, il componente principale si trova in `resources/js/App.svelte` gli altri componenti si trovano in `resources/js/Components`.
 - L'aspetto visivo dell'applicazione è curato utilizzando [Tailwind CSS]('https://tailwindcss.com/') e [Skeleton UI]('https://www.skeleton.de'), una libreria UI per [Svelte]('https://svelte.dev/').
 
@@ -21,11 +21,11 @@ Questo progetto consente agli utenti di autenticarsi e visualizzare un elenco di
 - Ci sono test specifici per verificare sia l'autenticazione che la capacità di recuperare l'elenco delle birre.
 - I test si assicurano che solo gli utenti autenticati possano accedere alle informazioni sulle birre e che vengano gestiti correttamente gli errori di autenticazione.
 - I due test si trovano: `tests/Feature/BeerApiTest.php` e `tests/Feature/LoginTest.php`
-- Una volta eseguito il setup del progetto basterà usare il comando `./vendor/bin/sail test` per eseguire i test.
+- Una volta eseguito il setup del progetto basterà lanciare il comando `./vendor/bin/sail test` per eseguire i test.
 
 ## Avviare il progetto
 
-Installer dependencies 
+Installare dependencies PHP
 ```shell
 composer i 
 ```
@@ -37,13 +37,13 @@ E fare il seeding del database con
 ```shell
 ./vendor/bin/sail artisan db:seed
 ```
-Una volta avviato il container possiamo procedere a installare le dipendenze front end e builder gli asset
+Una volta avviato il container possiamo procedere a installare le dipendenze front end e builder gli assets
 ```shell
 npm i && npm run build
 ```
 
 
-Andare a http://spin-up.test/  eseguire il login ora dovreste essere in grado di vedere la lista di birre.
+Andare all'indirizzo http://spin-up.test/ eseguire il login, ora dovreste essere in grado di vedere la lista di birre.
 
 ### Stack
 
