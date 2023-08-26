@@ -11,7 +11,6 @@
 
     let errors = {
         username: '',
-        password: '',
     }
 
     async function handleSubmit() {
@@ -49,9 +48,6 @@
                    title="Email" type="password"
                    name="password"
                    placeholder="Password"/>
-            {#if errors?.password}
-                <p class="ml-4 text-error-500">{errors.password}</p>
-            {/if}
         </div>
         <div class="w-full flex justify-end space-x-4">
             <button type="submit" class="btn variant-filled">Login</button>
