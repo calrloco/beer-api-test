@@ -36,7 +36,7 @@
                 class:input-error={errors?.username}
                 class="input px-2 py-1.5 outline-none"
                 bind:value={values.username} title="Username"
-                placeholder="Email" name="email"/>
+                placeholder="Username" name="username"/>
             {#if errors?.username}
                 <p class="ml-4 text-error-500">{errors.username}</p>
             {/if}

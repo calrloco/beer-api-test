@@ -27,10 +27,11 @@ class AuthController extends Controller
 
     /**
      * Store a newly created resource in storage.
+     * @throws \Illuminate\Validation\ValidationException
      */
     public function store(LoginRequest $request)
     {
-        Auth::attempt($request->validated());
+        $request->authenticate();
 
         $issuedToken = $request->user()->createToken('token');
 

@@ -27,7 +27,7 @@ class LoginRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'username' => ['required', 'string'],
+            'username' => ['required', 'string','exists:users,username'],
             'password' => ['required', 'string'],
         ];
     }
@@ -45,7 +45,7 @@ class LoginRequest extends FormRequest
             RateLimiter::hit($this->throttleKey());
 
             throw ValidationException::withMessages([
-                'email' => trans('auth.failed'),
+                'username' => trans('auth.failed'),
             ]);
         }
 
