@@ -42,6 +42,9 @@ npm i && npm run build
 Andare a http://spin-up.test/  eseguire il login ora dovreste essere in grado di vedere la lista di birre.
 
 ### Stack
-<img style="height: 150px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/985px-Laravel.svg.png">
-<img style="height: 150px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Svelte_Logo.svg/1200px-Svelte_Logo.svg.png">
-<img style="height: 150px" src="https://pbs.twimg.com/profile_images/1587479781544759297/TINbbJLC_400x400.png">
+
+<div class="flex">
+<img style="height: 50px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/985px-Laravel.svg.png">
+<img style="height: 50px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Svelte_Logo.svg/1200px-Svelte_Logo.svg.png">
+<img style="height: 50px" src="https://pbs.twimg.com/profile_images/1587479781544759297/TINbbJLC_400x400.png">
+</div>
