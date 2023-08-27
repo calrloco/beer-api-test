@@ -55,7 +55,6 @@
     }
 
     async function logOut() {
-
         await axios.post(route('logout'), {}, {
             headers: {
                 Authorization: `Bearer ${$tokenStore}`,
