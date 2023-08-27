@@ -8,9 +8,9 @@
 <div class="label">
     <span class="text-sm font-bold uppercase text-gray-700">{label}</span>
     <input
+        class="input px-2 py-1.5 outline-none"
         use:typeAction
         class:input-error={error}
-        class="input px-2 py-1.5 outline-none"
         bind:value={value}
         placeholder={label}
     />
