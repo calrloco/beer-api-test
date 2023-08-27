@@ -43,7 +43,7 @@ npm i && npm run build
 ```
 
 
-Andare all'indirizzo http://spin-up.test/ eseguire il login, ora dovreste essere in grado di vedere la lista di birre.
+Andare all'indirizzo http://spin-up.test/ || http://localhost/ eseguire il login, ora dovreste essere in grado di vedere la lista di birre.
 
 ### Stack
 
