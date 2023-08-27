@@ -9,6 +9,9 @@
 
     let beers = null
     let fetching = true
+
+    // subscribing to page and per page store
+    // as soon as the value change the callback is triggered
     pageStore.subscribe((page) => {
         getBeers({page: page})
     });
@@ -17,6 +20,7 @@
     });
 
     async function getBeers(pagination = {page: null, per_page: null}) {
+        // if we have no token we trigger the login
         if (!$tokenStore) {
             fetching = false
             return
