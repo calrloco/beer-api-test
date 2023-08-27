@@ -1,4 +1,4 @@
-<script lang="ts">
+<script lang="js">
     import Login from "./Components/Login.svelte";
     import {tokenStore, pageStore, perPageStore} from './stores.js'
     import axios from "axios";
