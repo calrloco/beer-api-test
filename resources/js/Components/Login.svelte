@@ -16,7 +16,7 @@
 
     async function handleSubmit() {
         try {
-            const response = await axios.post('/login', values);
+            const response = await axios.post(route('login'), values);
             const data = response.data;
             if (data.message === 'success') {
                 tokenStore.set(data.token);

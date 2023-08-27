@@ -13,8 +13,5 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::view('/','welcome');
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::post('login', [AuthController::class, 'store'])->name('login');

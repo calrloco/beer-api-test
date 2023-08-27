@@ -8,7 +8,7 @@ it('can login', function () {
 
     $user = User::factory()->create();
 
-    $response = $this->post('/login', [
+    $response = $this->post(route('login'), [
         'username' => 'root',
         'password' => 'password'
     ]);

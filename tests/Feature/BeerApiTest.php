@@ -14,7 +14,7 @@ it("can be fetched if logged in", function () {
 
     $user = User::factory()->create();
 
-    $loginResponse = $this->post('/login', [
+    $loginResponse = $this->post(route('login'), [
         'username' => 'root',
         'password' => 'password'
     ]);

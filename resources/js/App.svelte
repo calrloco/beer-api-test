@@ -24,7 +24,7 @@
         const {page, per_page} = pagination
         fetching = true
         try {
-            const response = await axios.get('api/beers', {
+            const response = await axios.get(route('beers.index'), {
                 headers: {
                     Authorization: `Bearer ${$tokenStore}`,
                     Accept: 'application/json',
