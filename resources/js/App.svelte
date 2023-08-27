@@ -45,7 +45,9 @@
             }
             window.scrollTo(0, 0)
         } catch (e) {
-            //
+            if(e.response.status === 401){
+               tokenStore.set(null)
+           }
         } finally {
             fetching = false
         }
