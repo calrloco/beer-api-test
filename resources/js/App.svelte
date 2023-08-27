@@ -60,7 +60,7 @@
             {/each}
         </div>
         <Pagination fetching={fetching}/>
-    {:else if (!$tokenStore) && !fetching }
+    {:else if !$tokenStore && !fetching }
         <div in:scale out:scale class="absolute inset-0 grid place-items-center">
             <Login onSuccess={()=>getBeers()}/>
         </div>

@@ -15,7 +15,8 @@ class BeerController extends Controller
 
         $page = $request->get('page', 1);
         $perPage = $request->get('per_page', 9);
-        $beers = Http::get("https://api.punkapi.com/v2/beers?page=$page&per_page=$perPage");
+        $baseUrl = config('services.punk_api.base_url');
+        $beers = Http::get("$baseUrl?page=$page&per_page=$perPage");
 
         return [
             'beers' => $beers->collect()

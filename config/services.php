@@ -30,5 +30,7 @@ return [
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
-
+    'punk_api' => [
+        'base_url' => 'https://api.punkapi.com/v2/beers'
+    ],
 ];
